@@ -1,6 +1,6 @@
 # WP Salt Key Updater 🔐
 
-Readme: [Português](README.pt-br.md)
+Readme: [Português](README.ptbr.md)
 
 <img src="https://github.com/user-attachments/assets/0d89f024-2b58-4d77-b86f-4cd1becd61bd" width="700">
 
@@ -52,14 +52,14 @@ python3 saltkey.py
 > Important: This script modifies a critical system file. We strongly recommend backing up your wp-config.php before running the tool. When changing the keys, all users (including the administrator) will be logged out of the /wp-admin panel.  
 > The script creates an automated backup before executing.
 
-## ⚠️ Disclaimer
+## ⚠️ Legal Notice
 
-> [!WARNING]  
-> This software is provided "as is". Always make sure you have explicit permission before executing. The author is not responsible for any misuse, legal consequences, or data impact caused by this tool.
+> [!WARNING]
+> This software is provided "as is". Always make sure to test first in a development environment. The author is not responsible for any misuse, legal consequences, or data impact caused by this tool.
 
 ## 📚 Detailed Tutorial
 
-For a complete, step-by-step guide on how to import generated files into Thunderbird and troubleshoot common migration issues, check out my full article:
+For a complete, step-by-step guide, check out my full article:
 
 👉 [**Change WordPress keys for security**](https://perciocastelo.com.br/blog/change-wordPress-keys-for-security.html)
 
