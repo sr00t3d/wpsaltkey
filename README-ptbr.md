@@ -52,14 +52,14 @@ python3 saltkey.py
 > Importante: Este script altera um ficheiro crítico do sistema. Recomendamos fortemente a realização de um backup do seu wp-config.php antes de executar a ferramenta. Ao alterar as chaves, todos os utilizadores (incluindo o administrador) serão desconectados do painel /wp-admin.
 > O script cria um backup automatizado antes de executar.
 
-## ⚠️ Disclaimer
+## ⚠️ Aviso Legal
 
 > [!WARNING]
-> Este software é fornecido "tal como está". Certifique-se sempre de ter permissão explícita antes de executar. O autor não se responsabiliza por qualquer uso indevido, consequências legais ou impacto nos dados causados ​​por esta ferramenta.
+> Este software é fornecido "como está". Certifique-se sempre de testar primeiro em um ambiente de desenvolvimento. O autor não se responsabiliza por qualquer uso indevido, consequências legais ou impacto em dados causado por esta ferramenta.
 
 ## 📚 Tutorial Detalhado
 
-Para um guia completo, passo a passo, sobre como importar os arquivos gerados para o Thunderbird e solucionar problemas comuns de migração, confira meu artigo completo:
+Para um guia completo, confira meu artigo completo:
 
 👉 [**Change WordPress Keys for security**](https://perciocastelo.com.br/blog/change-wordPress-keys-for-security.html)
 
