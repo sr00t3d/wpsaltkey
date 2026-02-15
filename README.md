@@ -1,6 +1,6 @@
 # WP Salt Key Updater 🔐
 
-Readme: [Português](README.ptbr.md)
+Readme: [Português](README-ptbr.md)
 
 <img src="https://github.com/user-attachments/assets/0d89f024-2b58-4d77-b86f-4cd1becd61bd" width="700">
 
