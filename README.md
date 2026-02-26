@@ -2,10 +2,10 @@
 
 Readme: [Português](README-ptbr.md)
 
-<img src="https://github.com/user-attachments/assets/0d89f024-2b58-4d77-b86f-4cd1becd61bd" width="700">
-
 ![License](https://img.shields.io/github/license/sr00t3d/wpsaltkey)
 ![Python Script](https://img.shields.io/badge/python-script-green)
+
+<img width="700" src="wpsaltkey-cover.webp" />
 
 The **WP Salt Key Updater** is a command-line utility designed to strengthen the security of WordPress sites. It automates the generation and replacement of secret keys and `salts` in the `wp-config.php` file, ensuring that all active sessions are invalidated and cookie encryption is refreshed.
 
