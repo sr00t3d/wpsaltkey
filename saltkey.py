@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
-################################################################################
-#                                                                              #
-#   PROJECT: WordPress Salt Key Updater                                        #
-#   VERSION: 1.1.0                                                             #
-#                                                                              #
-#   AUTHOR:  Percio Andrade                                                    #
-#   CONTACT: percio@evolya.com.br | contato@perciocastelo.com.br               #
-#   WEB:     https://perciocastelo.com.br                                      #
-#                                                                              #
-#   INFO:                                                                      #
-#   Automatically fetch and update WP security keys in wp-config.php.          #
-#                                                                              #
-################################################################################
+# ╔═══════════════════════════════════════════════════════════════════════════╗
+# ║                                                                           ║
+# ║   WordPress Salt Key Updater v1.1.0                                       ║
+# ║                                                                           ║
+# ╠═══════════════════════════════════════════════════════════════════════════╣
+# ║   Autor:   Percio Castelo                                                 ║
+# ║   Contato: percio@evolya.com.br | contato@perciocastelo.com.br            ║
+# ║   Web:     https://perciocastelo.com.br                                   ║
+# ║                                                                           ║
+# ║   Função:  Automatically fetch and update                                 ║
+# ║            WP security keys in wp-config.php                              ║
+# ╚═══════════════════════════════════════════════════════════════════════════╝
 
 import os
 import re

@@ -1,6 +1,6 @@
 # WP Salt Key Updater 🔐
 
-Readme: [Português](README-ptbr.md)
+Readme: [BR](README-ptbr.md)
 
 ![License](https://img.shields.io/github/license/sr00t3d/wpsaltkey)
 ![Python Script](https://img.shields.io/badge/python-script-green)
@@ -28,22 +28,47 @@ WordPress security keys (`AUTH_KEY`, `SECURE_AUTH_KEY`, etc.) make your site har
 
 ## 🚀 Installation and Usage
 
-1. **Clone the Repository into the Same Directory as WordPress**
+1. **Download the file to the server:**
 
 ```bash
-git clone https://github.com/sr00t3d/wpsaltkey/ .
+curl -O https://raw.githubusercontent.com/sr00t3d/wpsaltkey/refs/heads/main/saltkey.py
 ```
 
-2. **Grant Execution Permission**:
- 
+2. **Grant execution permission:**
+
 ```bash
-chmod +x saltkey.py
+chmod +x tmp-manager.sh
 ```
 
-3. **Run the Script**
+3. **Run the script:**
 
 ```bash
-python3 saltkey.py
+./tmp-manager.sh
+```
+
+Example:
+
+```bash
+python3 saltkey.py 
+Fetching fresh security keys from WordPress API...
+Creating backup of original file to 'wp-config.php.bak'...
+Updating keys in configuration file...
+
+SUCCESS: Security keys have been updated!
+```
+
+Updated keys:
+
+```bash
+grep WORDPRESS_ wp-config.php | grep -v DB
+define( 'WORDPRESS_AUTH_KEY',         '90933cfe29f8770697119865778e1d60dd4bff8e');
+define( 'WORDPRESS_SECURE_AUTH_KEY',  '400e6e51c39c99a15a01aec7df51b27f13674b1f');
+define( 'WORDPRESS_LOGGED_IN_KEY',    '2052ee4109f2f2e824b66bf48af4510ee09e6ad4');
+define( 'WORDPRESS_NONCE_KEY',        'cbf477490d8d0511a03a9870242a93b9c2c7bf7f');
+define( 'WORDPRESS_AUTH_SALT',        '018e7801dc9ef3dfda43b2a31cff57883b5415a9');
+define( 'WORDPRESS_SECURE_AUTH_SALT', 'f7430b5f413fa74d535aa376a7923371586e7141');
+define( 'WORDPRESS_LOGGED_IN_SALT',   '07fd3a50583ea1b5acaa66364c4a8f3267e8321c');
+define( 'WORDPRESS_NONCE_SALT',       '109224268d2524142552f89e55b4803e18f7aca5');
 ```
 
 ## ⚠️ Security Warning
@@ -55,7 +80,7 @@ python3 saltkey.py
 ## ⚠️ Legal Notice
 
 > [!WARNING]
-> This software is provided "as is". Always make sure to test first in a development environment. The author is not responsible for any misuse, legal consequences, or data impact caused by this tool.
+> This software is provided "as is". Always ensure you have explicit permission before running. The author is not responsible for any misuse, legal consequences, or data impact caused by this tool.
 
 ## 📚 Detailed Tutorial
 

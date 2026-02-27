@@ -1,6 +1,6 @@
 # WP Salt Key Updater 🔐
 
-Readme: [English](README.md)
+Readme: [EN](README.md)
 
 ![License](https://img.shields.io/github/license/sr00t3d/wpsaltkey)
 ![Python Script](https://img.shields.io/badge/python-script-green)
@@ -28,22 +28,47 @@ As chaves de segurança do WordPress (`AUTH_KEY`, `SECURE_AUTH_KEY`, etc.) torna
 
 ## 🚀 Instalação e Uso
 
-1. **Clonar o Repositório no mesmo diretorio do WordPress**
+1. **Baixe o arquivo no servidor:**
 
 ```bash
-git clone https://github.com/sr00t3d/wpsaltkey/ .
+curl -O https://raw.githubusercontent.com/sr00t3d/wpsaltkey/refs/heads/main/saltkey.py
 ```
 
-2. **Dar Permissão de Execução**:
- 
+2. **Dê permissão de execução:**
+
 ```bash
-chmod +x saltkey.py
+chmod +x tmp-manager.sh
 ```
 
-3. **Executar o Script**
+3. **Execute o script:**
 
 ```bash
-python3 saltkey.py
+./tmp-manager.sh
+```
+
+Exemplo:
+
+```bash
+python3 saltkey.py 
+Fetching fresh security keys from WordPress API...
+Creating backup of original file to 'wp-config.php.bak'...
+Updating keys in configuration file...
+
+SUCCESS: Security keys have been updated!
+```
+
+Chaves atualizadas:
+
+```bash
+grep WORDPRESS_ wp-config.php | grep -v DB
+define( 'WORDPRESS_AUTH_KEY',         '90933cfe29f8770697119865778e1d60dd4bff8e');
+define( 'WORDPRESS_SECURE_AUTH_KEY',  '400e6e51c39c99a15a01aec7df51b27f13674b1f');
+define( 'WORDPRESS_LOGGED_IN_KEY',    '2052ee4109f2f2e824b66bf48af4510ee09e6ad4');
+define( 'WORDPRESS_NONCE_KEY',        'cbf477490d8d0511a03a9870242a93b9c2c7bf7f');
+define( 'WORDPRESS_AUTH_SALT',        '018e7801dc9ef3dfda43b2a31cff57883b5415a9');
+define( 'WORDPRESS_SECURE_AUTH_SALT', 'f7430b5f413fa74d535aa376a7923371586e7141');
+define( 'WORDPRESS_LOGGED_IN_SALT',   '07fd3a50583ea1b5acaa66364c4a8f3267e8321c');
+define( 'WORDPRESS_NONCE_SALT',       '109224268d2524142552f89e55b4803e18f7aca5');
 ```
 
 ## ⚠️ Aviso de Segurança
@@ -55,11 +80,11 @@ python3 saltkey.py
 ## ⚠️ Aviso Legal
 
 > [!WARNING]
-> Este software é fornecido "como está". Certifique-se sempre de testar primeiro em um ambiente de desenvolvimento. O autor não se responsabiliza por qualquer uso indevido, consequências legais ou impacto em dados causado por esta ferramenta.
+> Este software é fornecido "tal como está". Certifique-se sempre de ter permissão explícita antes de executar. O autor não se responsabiliza por qualquer uso indevido, consequências legais ou impacto nos dados causados ​​por esta ferramenta.
 
-## 📚 Tutorial Detalhado
+## 📚 Detailed Tutorial
 
-Para um guia completo, confira meu artigo completo:
+Para um guia completo, passo a passo, confira meu artigo completo:
 
 👉 [**Change WordPress Keys for security**](https://perciocastelo.com.br/blog/change-wordPress-keys-for-security.html)
 
