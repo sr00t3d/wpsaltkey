@@ -1,32 +1,31 @@
-# WP Salt Key Updater 🔐
+# WP Salt Key Updater
 
 Readme: [BR](README-ptbr.md)
 
-![License](https://img.shields.io/github/license/sr00t3d/wpsaltkey)
-![Python Script](https://img.shields.io/badge/python-script-green)
+![License](https://img.shields.io/github/license/sr00t3d/wordpress-wpsaltkey) ![Python Script](https://img.shields.io/badge/python-script-green)
 
 <img width="700" src="wpsaltkey-cover.webp" />
 
 The **WP Salt Key Updater** is a command-line utility designed to strengthen the security of WordPress sites. It automates the generation and replacement of secret keys and `salts` in the `wp-config.php` file, ensuring that all active sessions are invalidated and cookie encryption is refreshed.
 
-## ❓ Why use it?
+## Why use it?
 
 WordPress security keys (`AUTH_KEY`, `SECURE_AUTH_KEY`, etc.) make your site harder to hack by adding random characters to passwords. It is a good security practice to change these keys periodically or immediately after a suspected breach.
 
-## ✨ Features
+## Features
 
 - **Full Automation**: Automatically replaces old keys with new ones.
 - **Official API Integration**: Retrieves random and secure keys directly from `WordPress.org`.
 - **Structure Preservation**: The script identifies the key block in your `wp-config.php` and replaces only what is necessary, without corrupting other settings.
 - **Security**: Instantly invalidates all active logins, forcing re-authentication (useful for expelling unwanted users).
 
-## 📋 Requirements
+## Requirements
 - **Python** 3 or higher installed  
 - Existing **wp-config.php** file in the same directory as the script.  
 - Write permissions for the **wp-config.php** file.  
 - `curl` or `wget` tools installed on the server.
 
-## 🚀 Installation and Usage
+## Installation and Usage
 
 1. **Download the file to the server:**
 
@@ -37,13 +36,13 @@ curl -O https://raw.githubusercontent.com/sr00t3d/wpsaltkey/refs/heads/main/salt
 2. **Grant execution permission:**
 
 ```bash
-chmod +x tmp-manager.sh
+chmod +x saltkey.py
 ```
 
 3. **Run the script:**
 
 ```bash
-./tmp-manager.sh
+python3 saltkey.py
 ```
 
 Example:
@@ -71,23 +70,23 @@ define( 'WORDPRESS_LOGGED_IN_SALT',   '07fd3a50583ea1b5acaa66364c4a8f3267e8321c'
 define( 'WORDPRESS_NONCE_SALT',       '109224268d2524142552f89e55b4803e18f7aca5');
 ```
 
-## ⚠️ Security Warning
+## Security Warning
 
 > [!WARNING]  
 > Important: This script modifies a critical system file. We strongly recommend backing up your wp-config.php before running the tool. When changing the keys, all users (including the administrator) will be logged out of the /wp-admin panel.  
 > The script creates an automated backup before executing.
 
-## ⚠️ Legal Notice
+## Legal Notice
 
 > [!WARNING]
 > This software is provided "as is". Always ensure you have explicit permission before running. The author is not responsible for any misuse, legal consequences, or data impact caused by this tool.
 
-## 📚 Detailed Tutorial
+## Detailed Tutorial
 
 For a complete, step-by-step guide, check out my full article:
 
 👉 [**Change WordPress keys for security**](https://perciocastelo.com.br/blog/change-wordPress-keys-for-security.html)
 
-## License 📄
+## License
 
 This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for more details.
